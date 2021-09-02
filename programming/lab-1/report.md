@@ -2,4 +2,4 @@
 1) Создать одномерный массив c типа long. Заполнить его нечётными числами от 5 до 21 включительно в порядке возрастания.
 2) Создать одномерный массив x типа double. Заполнить его 12-ю случайными числами в диапазоне от -13.0 до 13.0.
 3) Создать двумерный массив c размером 9x12. Вычислить его элементы по следующей формуле (где x = x[j]):
-    * если c[i] = 21, то ![](https://latex.codecogs.com/gif.latex?\dpi{150}\color{White}&space;\LARGE&space;c[i][j]&space;=&space;\tan(\sqrt[3]{\cos(x))})))
+    * если c[i] = 21, то ![](https://latex.codecogs.com/gif.latex?\dpi{150}&space;\large&space;\color{White}c[i][j]&space;=&space;\tan(\sqrt[3]{\cos(x)}))
