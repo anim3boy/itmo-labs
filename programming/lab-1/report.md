@@ -30,13 +30,8 @@ public class Main {
                 } else {
                     aboba[i][j] = Math.pow(Math.PI / (Math.asin(Math.cos(Math.log10(Math.acos(x[j] / 26)))) + 1), 3);
                 }
-                double o = Math.round(aboba[i][j] * 1000.0) / 1000.0;
-                int length = String.valueOf(o).length();
-                System.out.print(o);
-                for(int q = 0; q < 5 - length; q++){
-                    System.out.print(0);
-                }
-                System.out.print(" ");
+
+                System.out.print(String.format("%-7.3f ", aboba[i][j]));
             }
             System.out.println();
         }
