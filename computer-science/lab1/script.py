@@ -29,7 +29,9 @@ def base_translate(source, a=10, b=10):
         decimal = float(source.replace(',', '.'))
 
     # 10 -> b 
-    if b == 10: return str(int(decimal * 10 ** 5) / 10**5).replace('.', ',') if int(decimal) != decimal else decimal
+    if b == 10: 
+        return str(int(decimal * 10 ** 5) / 10**5).replace('.', ',')\
+            if int(decimal) != decimal else decimal
 
     fract_part_of_decimal = decimal - int(decimal)
     int_part_of_decimal = int(decimal)
@@ -45,7 +47,8 @@ def base_translate(source, a=10, b=10):
         int_part_of_result += ALPHABET[m]
 
     int_part_of_result = "0" if not int_part_of_result else int_part_of_result
-    while fract_part_of_result and fract_part_of_result[-1] == "0": fract_part_of_result = fract_part_of_result[::-1].replace('0', '', 1)[::-1]
+    while fract_part_of_result and fract_part_of_result[-1] == "0": 
+        fract_part_of_result = fract_part_of_result[::-1].replace('0', '', 1)[::-1]
     return '%s%s%s' % (int_part_of_result[::-1], ',' if fract_part_of_result else '', fract_part_of_result)
 
 def translate(source, a=10, b=10):
@@ -55,8 +58,8 @@ def translate(source, a=10, b=10):
     if a == 'Fib': 
         return fib_decoding(source, int(b))    
     a, b = int(a), int(b)
-    if a > 0 and b > 0 and (int(log(b) / log(a)) == log(b) / log(a) or int(log(a) / log(b)) == log(a) / log(b)) \
-        and ',' not in source:  #!!
+    if a > 0 and b > 0 and (int(log(b) / log(a)) == log(b) / log(a) \
+        or int(log(a) / log(b)) == log(a) / log(b)) and ',' not in source:  #!!
         # "easy way"
         block_length = int(log(b, a))
         padding = len(source) % block_length
@@ -64,7 +67,7 @@ def translate(source, a=10, b=10):
             source = "0" * (block_length - padding) + source
         blocks = [source[i : i + block_length] for i in range(0, len(source), block_length)]
         return ''.join([base_translate(i, a, b) for i in blocks])
-    else:
+    else:   
         return base_translate(source, a, b)
 
 def fib_encoding(n, a):
@@ -78,7 +81,8 @@ def fib_encoding(n, a):
     ALPHABET = sorted(list(set(ALPHABET[1:])))
 
     for i in product([0,1], repeat=len(ALPHABET)):
-        if sum(i[j] * ALPHABET[j] for j in range(len(ALPHABET))) == n and '11' not in ''.join(list(map(str, i))): 
+        if sum(i[j] * ALPHABET[j] for j in range(len(ALPHABET))) == n \
+            and '11' not in ''.join(list(map(str, i))): 
             return ''.join(list(map(str, i)))[::-1]
 
 def fib_decoding(n, b):
