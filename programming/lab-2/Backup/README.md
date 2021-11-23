@@ -38,12 +38,12 @@ b.go();
 
 ### Мои покемоны `[имя_покемона (аттаки)]`:
 <!-- pokemons_marker -->
-* Spiritomb (Confuse Ray, Will-O-Wisp, Facade, Rest)
-* Mankey (Icy Wind, Scratch, Drain Punch)
-* Primeape (Icy Wind, Scratch, Drain Punch, Rock Wrecker)
-* Igglybuff (Dream Eater, Icy Wind)
-* Jigglypuff (Dream Eater, Icy Wind, Body Slam)
-* Wigglytuff (Dream Eater, Icy Wind, Body Slam, Flamethrower)
+* Kecleon (Thunder, Psybeam, Tail Whip, Recover)
+* Lileep (Confuse Ray, Vacuum Wave, Facade)
+* Cradily (Confuse Ray, Vacuum Wave, Facade, Psyshock)
+* Flabebe (Rest, Sticky Web)
+* Floette (Rest, Sticky Web, Razor Leaf)
+* Florges (Rest, Sticky Web, Razor Leaf, Double Team)
 <!-- pokemons_marker -->
 
 ## Исходный код программы
