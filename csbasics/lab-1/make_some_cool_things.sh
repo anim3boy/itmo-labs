@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
-if [[ -a ./lab0 ]]; then
-  chmod -R 777 lab0
-  rm -r lab0
-  echo "lab0 has been deleted..."
-fi
-
-echo "Part 1"
+chmod -R 777 lab0
+rm -rf lab0
+# echo "lab0 has been deleted..."
+# echo "Part 1"
 
 mkdir -p lab0
 cd lab0
@@ -32,7 +29,7 @@ echo -e "Развитые способности\nImmunity" > gligar
 echo -e "Живет  Forest Mountain Taiga Urban" > munchlax
 cd ../
 
-echo "Part 2"
+# echo "Part 2"
 
 chmod 404 bulbasaur3
 chmod 006 caterpie3
@@ -59,7 +56,7 @@ chmod 004 vulpix0/munchlax
 
 # -------------------------------------------------------------- #
 
-echo "Part 3"
+# echo "Part 3"
 
 ln -s "`pwd`/grovyle5" Copy_80
 
@@ -101,16 +98,18 @@ cat grovyle5/grimer grovyle5/gengar > bulbasaur3_15
 chmod 064 grovyle5/grimer
 chmod 004 grovyle5/gengar
 
-echo "Part 4" 
+# echo "Part 4" 
 
 # wc -m v* ./*/v* ./*/*/v* | sort -n
-# ls -Rl 2> /tmp/lab0 | grep "^[^t.].*ti.*" | sort -k 2 -n -r  #needs to test
-# cd ./spheal5; for i in `ls -p | grep "[^/]$"`; do cat $i -n 2> /dev/null | grep -i "y$" ; done; cd ../;
+ls -Rl 2> /tmp/lab0 | grep "^[^t.].*ti.*" | sort -k 2 -n -r  #needs to test
+chmod 700 spheal5
+cd ./spheal5; for i in `ls -p | grep "[^/]$"`; do cat $i -n 2> /dev/null | grep -i "y$" ; done; cd ../;
+chmod 333 spheal5
 ls -Rl 2> /dev/null | grep "^-" | head -4 | sort -k7
 cat s* ./*/s* ./*/*/s* 2> /dev/null | sort -r  
 ls -Rl --time-style="+%Y%m%d%H%M%S" 2>&1 | grep "^-" | head -3 |sort -k6 -n -r
 
-echo "Part 5" 
+# echo "Part 5" 
 
 
 rm -f sandshrew0
@@ -119,7 +118,11 @@ rm -f spheal5/dewott
 
 rm -f Copy_*
 
+
+chmod -R 700 vulpix0
 rm -f vulpix0/gligarbulbasa*
+chmod 770 vulpix0
+
 
 chmod -R 700 grovyle5
 rm -rf grovyle5

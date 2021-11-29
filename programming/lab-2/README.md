@@ -38,12 +38,12 @@ b.go();
 
 ### Мои покемоны `[имя_покемона (аттаки)]`:
 <!-- pokemons_marker -->
-* Spiritomb (Confuse Ray, Will-O-Wisp, Facade, Rest)
-* Mankey (Icy Wind, Scratch, Drain Punch)
-* Primeape (Icy Wind, Scratch, Drain Punch, Rock Wrecker)
-* Igglybuff (Dream Eater, Icy Wind)
-* Jigglypuff (Dream Eater, Icy Wind, Body Slam)
-* Wigglytuff (Dream Eater, Icy Wind, Body Slam, Flamethrower)
+* Terrakion (Drill Peck, Bubble Beam, Hydro Pump, Swagger)
+* Deerling (Ice Beam, Rest, Confide)
+* Sawsbuck (Ice Beam, Rest, Confide, Brutal Swing)
+* Timburr (Rock Slide, Swagger)
+* Gurdurr (Rock Slide, Swagger, Psycho Cut)
+* Conkeldurr (Rock Slide, Swagger, Psycho Cut, Mud Shot)
 <!-- pokemons_marker -->
 
 ## Исходный код программы
