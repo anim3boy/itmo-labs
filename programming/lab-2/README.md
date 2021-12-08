@@ -46,55 +46,32 @@ b.go();
 * Conkeldurr (Rock Slide, Swagger, Psycho Cut, Mud Shot)
 <!-- pokemons_marker -->
 
-## Исходный код программы
+<!-- ## Исходный код
+*Main.java*
 ```
-import java.lang.Math;
+package me.emokid.lab2;
 
-public class Main {
+import ru.ifmo.se.pokemon.*;
+import me.emokid.lab2.pokemons.*;
 
+class Main {
     public static void main(String[] args) {
+        Battle b = new Battle();
 
-        long[] c = new long[17];
-        double[] x = new double[12];
-        double[][] arr = new double[9][12];
+        Terrakion p1 = new Terrakion("Paul McCartney", 2);
+        Deerling p2 = new Deerling("John Lennon", 2);
+        Sawsbuck p3 = new Sawsbuck("George Harrison", 2);
+        Timburr p4 = new Timburr("Kurt Cobain", 2);
+        Gurdurr p5 = new Gurdurr("Tim Bergling", 2);
+        Conkeldurr p6 = new Conkeldurr("Billy Joel", 2);
 
-        for (int i = 0, j = 5; i < c.length; j++, i++) {
-            c[i] = j;
-        }
-        for (int i = 0; i < x.length; i++) {
-            x[i] = -13.0 + (Math.random() * 13.0);
-        }
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[0].length; j++) {
-                if (c[i] == 21) {
-                    arr[i][j] = Math.tan(Math.cbrt(Math.cos(x[j])));
-                } else if (c[i] == 5 || c[i] == 7 || c[i] == 13 || c[i] == 15) {
-                    arr[i][j] = Math.cos(Math.log10(Math.sin(x[j]) * Math.sin(x[j])));
-                } else {
-                    arr[i][j] = Math.pow(Math.PI / (Math.asin(Math.cos(Math.log10(Math.acos(x[j] / 26)))) + 1), 3);
-                }
-
-                System.out.printf("%-7.3f ", arr[i][j]);
-            }
-            System.out.println();
-        }
+        b.addAlly(p1);
+        b.addAlly(p2);
+        b.addAlly(p3);
+        b.addFoe(p4);
+        b.addFoe(p5);
+        b.addFoe(p6);
+        b.go();
     }
 }
-
-```
-## Результат работы программы
-```
-0.992 0.523 0.999 1.000 0.280 0.780 0.997 0.985 0.993 0.697 0.762 0.906 
-2.674 2.597 2.549 2.367 2.405 2.427 2.448 2.383 2.348 2.496 2.427 2.587 
-0.992 0.523 0.999 1.000 0.280 0.780 0.997 0.985 0.993 0.697 0.762 0.906 
-2.674 2.597 2.549 2.367 2.405 2.427 2.448 2.383 2.348 2.496 2.427 2.587 
-2.674 2.597 2.549 2.367 2.405 2.427 2.448 2.383 2.348 2.496 2.427 2.587 
-2.674 2.597 2.549 2.367 2.405 2.427 2.448 2.383 2.348 2.496 2.427 2.587 
-2.674 2.597 2.549 2.367 2.405 2.427 2.448 2.383 2.348 2.496 2.427 2.587 
-2.674 2.597 2.549 2.367 2.405 2.427 2.448 2.383 2.348 2.496 2.427 2.587 
-0.992 0.523 0.999 1.000 0.280 0.780 0.997 0.985 0.993 0.697 0.762 0.906 
-```
-> Следует учитывать, что каждый новый запуск программы будет давать новый уникальный вывод.
-
-## Выводы по работе
-???
+``` -->
