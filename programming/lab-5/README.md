@@ -16,7 +16,7 @@ java -jar lab-5.jar
 
 В проекте используются некоторые спорные архитектурые решения связанные с типизированием. Это связано с использованием самописного парсера JSON. При модификации проекта в ходе разработки заданий к следующим лабораторным работам планирую перейти на Jackson Framework.
 
-![image](https://user-images.githubusercontent.com/76232618/173120783-9f7e2bed-c62d-43ab-8d3c-9cd54da87d77.png)
+![image](https://user-images.githubusercontent.com/76232618/173152739-d063ebc0-52c7-45bd-8346-bf7c921de58f.png)
 
 ## UML-диаграмма классов
 ![Project](https://user-images.githubusercontent.com/76232618/173141791-ec51a824-6271-4a87-a97e-1283b7338aae.png)
