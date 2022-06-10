@@ -14,6 +14,7 @@ import me.emokid.utils.MessageType;
 import me.emokid.utils.Utils;
 
 import java.io.*;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import static me.emokid.json.JSONUtils.convertJSONToJavaObjects;
@@ -45,18 +46,21 @@ public class Main {
             commandProcessor = new CommandProcessor(convertJSONToJavaObjects(dataLoader.load()), userInputScanner);
             Utils.print(MessageType.HEADER, Label.DATA_IS_LOADED_SUCCESSFUL);
         } catch (FileNotFoundException e) {
-            Utils.print(MessageType.ERROR, ExceptionMessage.WORKING_FILE_NOT_FOUND);
+            Utils.print(MessageType.ERROR, ExceptionMessage.CANT_LOAD_DATA);
             commandProcessor = new CommandProcessor(userInputScanner);
         } catch (IllegalArgumentException e) {
             Utils.print(MessageType.ERROR, ExceptionMessage.CANT_PARSE_JSON);
             commandProcessor = new CommandProcessor(userInputScanner);
         }
 
+
         while (true) {
             try {
                 Utils.fakeInput();
                 Command command = commandProcessor.parseCommand(userInputScanner.input());
                 commandProcessor.executeCommand(command);
+            } catch(NoSuchElementException e) {
+                Utils.exit();
             } catch (Exception e) {
                 Utils.print(MessageType.ERROR, e.getMessage());
             }

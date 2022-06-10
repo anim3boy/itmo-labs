@@ -502,7 +502,7 @@ public class HumanBeing implements Comparable<HumanBeing> {
             throw new NullPointerException();
         }
         if (impactSpeed > MAX_IMPACT_SPEED_VALUE){
-            throw new IllegalBoundsException(String.format(ExceptionMessage.MAX_VALUE_IS_FORMAT, MAX_IMPACT_SPEED_VALUE));
+            throw new IllegalBoundsException(ExceptionMessage.MAX_VALUE_IS_FORMAT);
         }
         this.impactSpeed = impactSpeed;
     }

@@ -263,7 +263,9 @@ public final class Utils {
      */
 
     public static Float parseFloat(String string) throws NumberFormatException{
-        if (string == null) return null;
+        if (string == null) {
+            return null;
+        }
         else return Float.parseFloat(string);
     }
 

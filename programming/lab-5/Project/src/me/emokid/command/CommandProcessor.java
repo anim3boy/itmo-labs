@@ -162,7 +162,7 @@ public class CommandProcessor {
                 try {
                     id = Utils.parseInt(getArg());
                 } catch (NumberFormatException e) {
-                    throw new NumberFormatException(ExceptionMessage.CANT_PARSE);
+                    throw new NumberFormatException(ExceptionMessage.CANT_PARSE_ARG);
                 }
                 boolean flag = false;
                 for (String key : dataCollection.keySet()) {
@@ -318,6 +318,9 @@ public class CommandProcessor {
         commandCollection.put(CommandWord.REPLACE_IF_LOWE, new Command(CommandWord.REPLACE_IF_LOWE, Label.REPLACE_IF_LOWE_DESCRIPTION) {
             public void execute() {
                 String key = getArg();
+                if (dataCollection.get(key) == null){
+                    throw new NoSuchElementException(ExceptionMessage.VALUE_NOT_EXISTS);
+                }
                 HumanBeing newLine = new HumanBeing(generateUniqueRandomId(), userInputReader);
                 HumanBeing oldLine = (HumanBeing) dataCollection.get(key);
                 if (newLine.compareTo(oldLine) < 0) {

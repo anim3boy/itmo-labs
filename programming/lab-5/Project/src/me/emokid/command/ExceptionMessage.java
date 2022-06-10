@@ -15,10 +15,11 @@ public class ExceptionMessage {
     public static final String WRONG_JSON_TYPE = "Обнаружен неопределяемый JSON объект!";
     public static final String CANT_BE_NEGATIVE = "Поле не может быть отрицательным!";
     public static final String CANT_BE_EMPTY = "Поле не может быть пустым!";
-    public static final String MAX_VALUE_IS_FORMAT = "Максимальное допустимое значение поля - %d!";
+    public static final String MAX_VALUE_IS_FORMAT = "Превышено максимальное допустимое значение поля!";
 
     public static final String FILE_NOT_FOUND = "Указанный файл не найден!";
     public static final String WORKING_FILE_NOT_FOUND = "JSON файл не найден по указанному в переменной окружения пути!";
     public static final String ENVIRONMENT_VARIABLE_BOT_FOUND = "Переменная окружения не задана!";
     public static final String CANT_PARSE_JSON = "Невозможно спарсить JSON данные из файла!";
+    public static final String CANT_PARSE_ARG = "Невозможно привести аргумент к нужному типу!";
 }
