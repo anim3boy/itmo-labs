@@ -18,6 +18,12 @@ java -jar lab-5.jar
 
 ![image](https://user-images.githubusercontent.com/76232618/173120783-9f7e2bed-c62d-43ab-8d3c-9cd54da87d77.png)
 
+## UML-диаграмма классов
+![Project](https://user-images.githubusercontent.com/76232618/173141791-ec51a824-6271-4a87-a97e-1283b7338aae.png)
+
+![Project1](https://user-images.githubusercontent.com/76232618/173141778-98e68b92-a854-441c-a30f-956c240bbd35.png)
+
+
 ## Защита
 
 ### 1. Коллекции. Сортировка элементов коллекции. Интерфейсы `java.util.Comparable` и `java.util.Comparator`.
