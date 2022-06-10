@@ -22,4 +22,6 @@ public class ExceptionMessage {
     public static final String ENVIRONMENT_VARIABLE_BOT_FOUND = "Переменная окружения не задана!";
     public static final String CANT_PARSE_JSON = "Невозможно спарсить JSON данные из файла!";
     public static final String CANT_PARSE_ARG = "Невозможно привести аргумент к нужному типу!";
+    public static final String ENUM_NOT_FOUND = "Выберите значение из списка!";
+    public static final String CANT_PARSE_COMMAND = "Невозможно запустить сценарий из указанного файла!";
 }

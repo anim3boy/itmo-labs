@@ -17,7 +17,7 @@ public class JSONUtils {
      * Regex string whitelist for input characters
      */
 
-    private static final String INPUT_CHARACTERS_WHITELIST_REGEX = "[_а-яА-Яa-zA-Z0-9 ,.!?@#$%^&*(){}\\[\\]:;]*";
+    private static final String INPUT_CHARACTERS_WHITELIST_REGEX = "[_а-яА-Яa-zA-Z0-9 ,.!?@#$%^&*(){}\\[\\]:;\\-/]*";
 
     /**
      * Double numbers delimiter constant

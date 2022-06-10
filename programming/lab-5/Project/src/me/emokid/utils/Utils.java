@@ -2,6 +2,7 @@ package me.emokid.utils;
 
 
 import me.emokid.IO.IOConstants;
+import me.emokid.command.ExceptionMessage;
 import me.emokid.json.JSONUtils;
 import me.emokid.scheme.Mood;
 import me.emokid.utils.exception.EnvironmentVariableNotFoundException;
@@ -297,8 +298,17 @@ public final class Utils {
      */
 
     public static Mood parseEnum(String string) throws IllegalArgumentException{
-        if (string == null) return null;
-        else return Mood.valueOf(string.toUpperCase());
+        if (string == null) {
+            return null;
+        }
+        else {
+            try{
+                return Mood.valueOf(string.toUpperCase());
+            }
+            catch (IllegalArgumentException e){
+                throw new IllegalArgumentException(ExceptionMessage.ENUM_NOT_FOUND);
+            }
+        }
     }
 
     /**

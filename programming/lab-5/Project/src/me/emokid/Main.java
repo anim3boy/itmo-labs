@@ -21,7 +21,7 @@ import static me.emokid.json.JSONUtils.convertJSONToJavaObjects;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, NoSuchFieldException, IllegalAccessException {
 
         // check if environment variable is not set
         String path = null;
@@ -53,15 +53,16 @@ public class Main {
             commandProcessor = new CommandProcessor(userInputScanner);
         }
 
-
         while (true) {
             try {
                 Utils.fakeInput();
                 Command command = commandProcessor.parseCommand(userInputScanner.input());
                 commandProcessor.executeCommand(command);
-            } catch(NoSuchElementException e) {
-                Utils.exit();
             } catch (Exception e) {
+                // CTRL+D
+                if(e instanceof NoSuchElementException && e.getMessage().equals("No line found")){
+                    Utils.exit();
+                }
                 Utils.print(MessageType.ERROR, e.getMessage());
             }
         }

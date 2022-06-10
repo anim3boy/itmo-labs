@@ -284,8 +284,10 @@ public class CommandProcessor {
                     if (key.equals(metaDataKey)) {
                         continue;
                     }
-                    if (((HumanBeing) dataCollection.get(key)).getSoundtrackName().contains(soundtrackName)) {
-                        Utils.print(MessageType.PART_OF_LIST, key, dataCollection.get(key));
+                    HumanBeing humanBeing = (HumanBeing) dataCollection.get(key);
+                    if ((humanBeing).getSoundtrackName().contains(soundtrackName)) {
+                        Utils.print(MessageType.HEADER, key);
+                        humanBeing.print();
                     }
                 }
             }
@@ -457,7 +459,7 @@ public class CommandProcessor {
     public Command parseCommand(String raw) throws NoSuchElementException {
         String[] splitted = raw.split("\\s+");
         String commandName = splitted[0];
-        Command command = commandCollection.get(commandName);
+        Command command = commandCollection.get(commandName).clone();
         if (command == null) {
             throw new NoSuchElementException(ExceptionMessage.WRONG_COMMAND);
         }
@@ -481,7 +483,7 @@ public class CommandProcessor {
         String commandName = splitted[0];
         Command command = commandCollection.get(commandName);
         if (command == null) {
-            throw new NoSuchElementException(ExceptionMessage.WRONG_COMMAND);
+            throw new NoSuchElementException(ExceptionMessage.CANT_PARSE_COMMAND);
         }
         if (splitted.length > 1) {
             String arg = splitted[1];

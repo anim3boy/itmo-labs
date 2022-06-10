@@ -5,7 +5,7 @@ import java.io.IOException;
 import static me.emokid.scheme.MetaData.metaDataKey;
 
 
-public class Command {
+public class Command implements Cloneable{
 
     /**
      * Command description
@@ -96,5 +96,14 @@ public class Command {
     @Override
     public String toString() {
         return getDescription();
+    }
+
+    @Override
+    public Command clone() {
+        try {
+            return (Command) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }
