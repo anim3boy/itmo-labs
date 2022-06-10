@@ -8,13 +8,15 @@ _Мой вариант: `10013`_
 
 ```bash
 cd /home/s335050/lab-5
-export EMODB=$your_path_to_json_file
+export EMODB=/home/s335050/lab-5/data.json
 java -jar lab-5.jar
 ```
 
 ## Комментарий
 
 В проекте используются некоторые спорные архитектурые решения связанные с типизированием. Это связано с использованием самописного парсера JSON. При модификации проекта в ходе разработки заданий к следующим лабораторным работам планирую перейти на Jackson Framework.
+
+![image](https://user-images.githubusercontent.com/76232618/173120783-9f7e2bed-c62d-43ab-8d3c-9cd54da87d77.png)
 
 ## Защита
 
