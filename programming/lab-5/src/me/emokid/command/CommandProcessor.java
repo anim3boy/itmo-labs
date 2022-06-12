@@ -459,10 +459,10 @@ public class CommandProcessor {
     public Command parseCommand(String raw) throws NoSuchElementException {
         String[] splitted = raw.split("\\s+");
         String commandName = splitted[0];
-        Command command = commandCollection.get(commandName).clone();
-        if (command == null) {
+        if (commandCollection.get(commandName) == null) {
             throw new NoSuchElementException(ExceptionMessage.WRONG_COMMAND);
         }
+        Command command = commandCollection.get(commandName).clone();
         if (splitted.length > 1) {
             String arg = splitted[1];
             command.acceptArg(arg);

@@ -21,7 +21,7 @@ import static me.emokid.json.JSONUtils.convertJSONToJavaObjects;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, NoSuchFieldException, IllegalAccessException {
+    public static void main(String[] args) {
 
         // check if environment variable is not set
         String path = null;
@@ -52,7 +52,6 @@ public class Main {
             Utils.print(MessageType.ERROR, ExceptionMessage.CANT_PARSE_JSON);
             commandProcessor = new CommandProcessor(userInputScanner);
         }
-
         while (true) {
             try {
                 Utils.fakeInput();
