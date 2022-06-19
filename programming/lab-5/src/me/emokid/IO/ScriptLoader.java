@@ -43,7 +43,7 @@ public class ScriptLoader implements Loader<List<Command>>{
         Scanner sc;
         sc = new Scanner(new File(path));
         while (sc.hasNextLine()) {
-            CommandProcessor.parseCommand(sc.nextLine(), this.commandCollection);
+            commands.add(CommandProcessor.parseCommand(sc.nextLine(), this.commandCollection));
         }
         return commands;
     }

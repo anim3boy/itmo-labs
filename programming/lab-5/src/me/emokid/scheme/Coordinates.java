@@ -16,13 +16,13 @@ public class Coordinates {
 
     /**
      * X axis value
+     * Cannot be null
      */
 
     private Long x;
 
     /**
      * Y axis value
-     * Cannot be null
      */
 
     private double y;
