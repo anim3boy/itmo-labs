@@ -1,6 +1,6 @@
 package me.emokid.command;
 
-public class ExceptionMessage {
+public final class ExceptionMessage {
     public static final String ELEMENT_NOT_FOUNT = "Элемент с таким ключом не найден!";
     public static final String RESERVED_VALUE = "Вы пытаетесь модифицировать служебные данные!";
     public static final String VALUE_ALREADY_EXISTS = "Элемент с таким ключом уже существует!";

@@ -1,6 +1,6 @@
 package me.emokid.json;
 
-public class JSONConstant {
+public final class JSONConstant {
     public static final char STRING_PREFIX = '"';
     public static final char STRING_POSTFIX = '"';
     public static final char OBJECT_PREFIX = '{';

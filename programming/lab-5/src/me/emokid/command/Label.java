@@ -1,6 +1,6 @@
 package me.emokid.command;
 
-public class Label {
+public final class Label {
     // output formatting constants
 
     public static final String HELP_DESCRIPTION = "Вывести справку по доступным командам";

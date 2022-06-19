@@ -11,7 +11,7 @@ import java.util.TreeMap;
 
 import static me.emokid.scheme.MetaData.metaDataKey;
 
-public class JSONUtils {
+public final class JSONUtils {
 
     /**
      * Regex string whitelist for input characters
